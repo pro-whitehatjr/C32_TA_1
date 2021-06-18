@@ -108,13 +108,6 @@ function drop()
   fruit_con.dettach();
   fruit_con = null; 
 }
-function keyPressed()
-{
-  if(keyCode==LEFT_ARROW)
-  {
-    airblow();
-  }
-}
 
 function collide(body,sprite)
 {
@@ -131,9 +124,4 @@ function collide(body,sprite)
               return false;
             }
          }
-}
-
-function airblow()
-{
-  Matter.Body.applyForce(fruit,{x:0,y:0},{x:0.02,y:0})
 }
